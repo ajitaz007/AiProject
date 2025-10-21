@@ -23,9 +23,9 @@ train_datagen = ImageDataGenerator(
 
 test_datagen = ImageDataGenerator(rescale = 1./255)
 
-train_dir = r'C:\Users\Ajiita Wijaksara\Documents\Tsflow\cats_vs_dogs\train'
-val_dir = r'C:\Users\Ajiita Wijaksara\Documents\Tsflow\cats_vs_dogs\validation'
-test_dir = r'C:\Users\Ajiita Wijaksara\Documents\Tsflow\cats_vs_dogs\test'
+train_dir = 'path/to/cats_vs_dogs\train'
+val_dir ='path/to/cats_vs_dogs\validation'
+test_dir = 'path/to/cats_vs_dogs\test'
 
 train_generator = train_datagen.flow_from_directory(
     train_dir,
