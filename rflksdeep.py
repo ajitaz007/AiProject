@@ -3,7 +3,6 @@ from tensorflow.keras import layers, models
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import matplotlib.pyplot as plt
 from tensorflow.keras.callbacks import EarlyStopping
-import os
 import shutil
 from sklearn.model_selection import train_test_split
 from PIL import Image
