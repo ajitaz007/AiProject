@@ -6,6 +6,7 @@ from tensorflow.keras.callbacks import EarlyStopping
 import shutil
 from sklearn.model_selection import train_test_split
 from PIL import Image
+import os
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 from tensorflow.keras.preprocessing import image
 import numpy as np
@@ -23,9 +24,11 @@ train_datagen = ImageDataGenerator(
 
 test_datagen = ImageDataGenerator(rescale = 1./255)
 
-train_dir = 'path/to/cats_vs_dogs\train'
-val_dir ='path/to/cats_vs_dogs\validation'
-test_dir = 'path/to/cats_vs_dogs\test'
+base_dir = os.path.join('data', 'cats_vs_dogs')
+
+train_dir = os.path.join(base_dir, 'train')
+val_dir   = os.path.join(base_dir, 'validation')
+test_dir  = os.path.join(base_dir, 'test')
 
 train_generator = train_datagen.flow_from_directory(
     train_dir,
